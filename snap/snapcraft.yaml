@@ -6,6 +6,9 @@ description: |
   Fast code, fast.
 confinement: strict
 grade: stable
+architectures:
+  - build-on: amd64
+  - build-on: i386
 
 apps:
   catdoc:
