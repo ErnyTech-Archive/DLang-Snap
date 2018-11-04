@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=DLang documentation
+GenericName=Documentation for the D Programming Language
+Exec=snap run dlang.docs
+Categories=Development;
+Terminal=false
+Icon=usr/share/doc/dlang/html/d/images/dlogo.png

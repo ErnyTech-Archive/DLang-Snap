@@ -4,44 +4,84 @@ summary: D language
 description: |
   D is a general-purpose programming language with static typing, systems-level access, and C-like syntax. With the D Programming Language, write fast, read fast, and run fast. 
   Fast code, fast.
-confinement: classic
+confinement: strict
 grade: stable
 
 apps:
   catdoc:
     command: usr/bin/catdoc
+    plugs:
+      - home
   changed:
     command: usr/bin/changed
+    plugs:
+      - home
+      - network
   checkwhitespace:
     command: usr/bin/checkwhitespace
+    plugs:
+      - home
   contributors:
     command: usr/bin/contributors
+    plugs:
+      - home
   dcd-client:
     command: usr/bin/dcd-client
+    plugs:
+      - home
+      - network
   dcd-server:
     command: usr/bin/dcd-server
+    plugs:
+      - home
+      - network
+      - network-bind
   ddemangle:
     command: usr/bin/ddemangle
+    plugs:
+      - home
   detab:
     command: usr/bin/detab
+    plugs:
+      - home
   dfmt:
     command: usr/bin/dfmt
+    plugs:
+      - home
   dget:
     command: usr/bin/dget
+    plugs:
+      - home
   dmd:
     command: usr/bin/dmd -conf=/snap/dlang/current/etc/dmd.conf
+    plugs:
+      - home
   docs:
     command: xdg-open /snap/dlang/current/usr/share/doc/dlang/html/d/spec/spec.html
+    desktop: dlang-docs.desktop
+    plugs:
+      - desktop
   dscanner:
     command: usr/bin/dscanner
+    plugs:
+      - home
   dub:
     command: usr/bin/dub
+    plugs:
+      - home
+      - network
   dustmite:
     command: usr/bin/dustmite
+    plugs:
+      - home
   rdmd:
     command: usr/bin/rdmd
+    plugs:
+      - home
   tolf:
     command: usr/bin/tolf
+    plugs:
+      - home
   
 parts:
   dmd:
@@ -65,6 +105,8 @@ parts:
       - -linux
       - -man
       - -samples
+    stage-packages:
+      - gcc
     build-packages:
       - curl
       - make 
