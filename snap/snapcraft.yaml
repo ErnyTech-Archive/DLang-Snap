@@ -29,7 +29,7 @@ apps:
   dget:
     command: usr/bin/dget
   dmd:
-    command: usr/bin/dmd
+    command: usr/bin/dmd -conf=/snap/dlang/current/etc/dmd.conf
   dscanner:
     command: usr/bin/dscanner
   dub:
@@ -70,7 +70,7 @@ parts:
     plugin: dump
     source: .
     organize:
-      dmd.conf: usr/bin/dmd.conf
+      dmd.conf: etc/dmd.conf
   druntime:
     source: https://github.com/dlang/druntime.git
     source-tag: *dversion
