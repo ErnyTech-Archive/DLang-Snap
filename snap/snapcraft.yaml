@@ -139,20 +139,9 @@ parts:
     override-pull: |
       snapcraftctl pull
       sed -i 's/DMD_DIR=..\/dmd//' posix.mak
-    override-build: |
-      snapcraftctl build
-
-      if [ "$SNAP_ARCH" = "amd64" ]; then
-        DARCH=64
-      fi
-      
-      if [ "$SNAP_ARCH" = "i386" ]; then
-        DARCH=32
-      fi
-    
-      mkdir -p "$SNAPCRAFT_PART_INSTALL/usr/lib/$SNAPCRAFT_ARCH_TRIPLET"
-      cp generated/linux/release/$DARCH/libdruntime.a "$SNAPCRAFT_PART_INSTALL/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/"
     organize:
+      generated/linux/release/32/libdruntime.a usr/lib/i386-linux-gnu/libdruntime.a
+      generated/linux/release/64/libdruntime.a usr/lib/x86_64-linux-gnu/libdruntime.a
       src/druntime/import: usr/include/dlang/dmd
       druntime-LICENSE.txt: usr/share/doc/dlang/druntime-LICENSE.txt
     stage:
