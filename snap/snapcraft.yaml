@@ -4,6 +4,8 @@ summary: D language
 description: |
   D is a general-purpose programming language with static typing, systems-level access, and C-like syntax. With the D Programming Language, write fast, read fast, and run fast. 
   Fast code, fast.
+  This snap is maintained by Ernesto Castellotti, and is not necessarily endorsed or officially maintained by the upstream developers.
+  
 confinement: strict
 grade: stable
 architectures:
