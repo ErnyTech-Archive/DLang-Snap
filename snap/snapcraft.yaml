@@ -12,6 +12,10 @@ architectures:
   - build-on: amd64
   - build-on: i386
 
+environment:
+  PATH: $PATH:$SNAP/usr/bin
+  CC: $SNAP/usr/bin/gcc --sysroot=$SNAP
+
 apps:
   catdoc:
     command: usr/bin/catdoc
@@ -111,6 +115,8 @@ parts:
       - -man
       - -samples
     stage-packages:
+      - libc6
+      - libc6-dev
       - gcc
     build-packages:
       - curl
