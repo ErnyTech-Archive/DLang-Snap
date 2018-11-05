@@ -66,7 +66,7 @@ apps:
     plugs:
       - home
   docs:
-    command: usr/bin/xdg-open /snap/dlang/current/usr/share/doc/dlang/html/d/spec/spec.html
+    command: /usr/bin/xdg-open /snap/dlang/current/usr/share/doc/dlang/html/d/spec/spec.html
     desktop: dlang-docs.desktop
     plugs:
       - desktop
@@ -135,8 +135,6 @@ parts:
       dmd2/html: usr/share/doc/dlang/html
     stage:
       - -dmd2
-    stage-packages:
-      - xdg-utils
   druntime:
     source: https://github.com/dlang/druntime.git
     source-tag: *dversion
