@@ -16,6 +16,14 @@ environment:
   PATH: $PATH:$SNAP/usr/bin
   CC: $SNAP/usr/bin/gcc --sysroot=$SNAP
 
+slots:
+  dlang:
+    interface: content
+    read:
+      - $SNAP/etc
+      - $SNAP/lib
+      - $SNAP/lib64
+      - $SNAP/usr
 apps:
   catdoc:
     command: usr/bin/catdoc
