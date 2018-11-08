@@ -73,11 +73,6 @@ apps:
     command: usr/bin/dmd -conf=/snap/dlang/current/etc/dmd.conf
     plugs:
       - home
-  docs:
-    command: /usr/bin/xdg-open /snap/dlang/current/usr/share/doc/dlang/html/d/spec/spec.html
-    desktop: dlang-docs.desktop
-    plugs:
-      - desktop
   dscanner:
     command: usr/bin/dscanner
     plugs:
