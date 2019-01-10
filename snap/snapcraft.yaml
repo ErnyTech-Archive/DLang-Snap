@@ -7,15 +7,11 @@ description: |
   Fast code, fast.
   This snap is maintained by Ernesto Castellotti, and is not necessarily endorsed or officially maintained by the upstream developers.
   
-confinement: strict
+confinement: classic
 grade: stable
 architectures:
   - build-on: amd64
   - build-on: i386
-
-environment:
-  PATH: $PATH:$SNAP/usr/bin
-  CC: $SNAP/usr/bin/gcc --sysroot=$SNAP
 
 slots:
   dlang:
