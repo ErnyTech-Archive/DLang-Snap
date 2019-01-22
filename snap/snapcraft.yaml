@@ -1,7 +1,6 @@
 name: dlang
 version: v2.084.0
 summary: D language
-base: core18
 description: |
   D is a general-purpose programming language with static typing, systems-level access, and C-like syntax. With the D Programming Language, write fast, read fast, and run fast. 
   Fast code, fast.
